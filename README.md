@@ -27,6 +27,8 @@ venv\Scripts\activate          # On Windows
 pip install -r requirements.txt
 
 🧠 Key Components
+
+
 1️⃣ DICOM Preprocessing
 
 Converts .dcm medical images to normalized tensors
@@ -58,7 +60,9 @@ Visualizes AI model attention over the same chest X-ray
 
 Compares human (radiologist) vs AI focus
 
-Example:![Grad-CAM Example](docs/Heatmap_Pneumonia.png)
+Example:
+
+![Grad-CAM Example](docs/Heatmap_Pneumonia.png)
 
 
 
@@ -86,7 +90,7 @@ patientId, x, y, width, height, Target
 
 🧩 Author
 
-Miloš Stanisljavić
+Milos Stanisljevic
 Radiology Technologist (MTRA) | AI & Medical Imaging Enthusiast
 LinkedIn Profile:
  
