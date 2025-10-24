@@ -51,7 +51,10 @@ Displays radiologist-annotated regions of pneumonia (ground truth)
 
 Uses bounding boxes from stage_2_train_labels.csv
 
-Example:(docs/BBOX_Pneumonia.png)
+copy link for an example image:
+https://raw.githubusercontent.com/Kenkai993/rsna-pneumonia-detection/main/Pneumonia%20detection%20project/docs/BBOX_Pneumonia.png
+
+
 
 
 4️⃣ Grad-CAM (Model Interpretability)
@@ -60,8 +63,8 @@ Visualizes AI model attention over the same chest X-ray
 
 Compares human (radiologist) vs AI focus
 
-Example:
-![Grad-CAM Example](https://raw.githubusercontent.com/Kenkai993/rsna-pneumonia-detection/main/Pneumonia%20detection%20project/docs/Heatmap_Pneumonia.png)
+Copy link for an example image:
+https://raw.githubusercontent.com/Kenkai993/rsna-pneumonia-detection/main/Pneumonia%20detection%20project/docs/Heatmap_Pneumonia.png
 
 
 
@@ -93,5 +96,5 @@ patientId, x, y, width, height, Target
 
 Milos Stanisljevic
 Radiology Technologist (MTRA) | AI & Medical Imaging Enthusiast
-LinkedIn Profile:
+LinkedIn Profile: www.linkedin.com/in/miloš-stanišljević-b1431b24a
  
