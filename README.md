@@ -62,8 +62,7 @@ Compares human (radiologist) vs AI focus
 
 Example:
 
-![Grad-CAM Example](https://github.com/Kenkai993/rsna-pneumonia-detection/blob/main/Pneumonia%20detection%20project/docs/Heatmap_Pneumonia.png?raw=true)
-
+![Grad-CAM Example](https://raw.githubusercontent.com/Kenkai993/rsna-pneumonia-detection/main/Pneumonia%20detection%20project/docs/Heatmap_Pneumonia.png)
 
 
 
