@@ -62,7 +62,7 @@ Compares human (radiologist) vs AI focus
 
 Example:
 
-https://github.com/Kenkai993/rsna-pneumonia-detection/blob/main/Pneumonia%20detection%20project/docs/Heatmap_Pneumonia.png
+https://github.com/Kenkai993/rsna-pneumonia-detection/blob/main/Pneumonia%20detection%20project/docs/Heatmap_Pneumonia.png?raw=True
 
 
 
