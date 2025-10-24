@@ -1,78 +1,91 @@
-# 🫁 Pneumonia Detection on Chest X-rays (RSNA Dataset)
+# RSNA Pneumonia Detection Project 🫁
 
-This project demonstrates a **complete end-to-end AI workflow** for pneumonia detection using chest X-ray (DICOM) images — from preprocessing to model interpretability (Grad-CAM).
+This project demonstrates a complete AI pipeline for detecting and visualizing pneumonia in chest X-rays using the **RSNA Pneumonia Detection Challenge** dataset.
 
-Developed as part of my professional transition from **Radiologic Technologist (MTRA)** to **AI/ML Specialist in Medical Imaging**, this project combines practical clinical insight with deep learning.
-
----
-
-## 🧠 Project Overview
-- **Modality:** Chest X-ray (DICOM)
-- **Dataset:** RSNA Pneumonia Detection Challenge
-- **Framework:** PyTorch and Pytorch_lightning
-- **Goal:** Detect and localize pneumonia on X-rays with visual explanations (Grad-CAM).
-## 🧩 Repository Structure
-Pneumonia detection project/
-│
-├── 01_DICOM_Preproc.ipynb → DICOM loading, normalization, pixel value scaling
-├── 02_Pneumonia_classification.ipynb → CNN model (ResNet/DenseNet) for pneumonia classification
-├── 03_Pneumonia_Boundbox.ipynb → Bounding box localization of pneumonia regions
-├── 04_Pneumonia_cam.ipynb → Grad-CAM heatmap visualization
-│
-├── requirements.txt
-└── README.md
-
-## ⚙️ Technologies Used
-| Category | Library |
-|-----------|----------|
-| Deep Learning | PyTorch, TorchVision |
-| Image Processing | OpenCV, NumPy, pydicom |
-| Data Handling | pandas, tqdm |
-| Visualization | Matplotlib |
-| Model Evaluation | TorchMetrics |
+It combines medical imaging preprocessing, model training, bounding box visualization, and Grad-CAM interpretability into a unified, reproducible workflow.
 
 ---
 
-## 🚀 How to Run
+## 📁 Project Structure
+rsna-pneumonia-detection-challenge
+│
+├── 01_Dicom_image_Preproc.ipynb # DICOM loading & preprocessing
+├── 02_Pneumonia_classification.ipynb # Model training & evaluation (PyTorch Lightning)
+├── 03_Pneumonia_Boundbox.ipynb # Radiologist bounding box visualization
+├── 04_Pneumonia_Cam.ipynb # Grad-CAM explainability (AI heatmap)
 
-1️⃣ Clone this repository  
+
+## ⚙️ Installation
+
+Create a virtual environment and install dependencies:
+
 ```bash
-git clone https://github.com/Kenkai993/Pneumonia-detection.git
-cd Pneumonia-detection
-
-2️⃣Install dependencies
+python -m venv venv
+venv\Scripts\activate          # On Windows
+# source venv/bin/activate     # On Linux/Mac
 
 pip install -r requirements.txt
 
-3️⃣ Run the notebooks in order:
-01_DICOM_image_Preproc_.ipynb
-02_Pneumonia_classification.ipynb
-03_Pneumonia_Boundbox.ipynb
-04_Pneumonia_Cam.ipynb
+🧠 Key Components
+1️⃣ DICOM Preprocessing
 
-🔬 Results
+Converts .dcm medical images to normalized tensors
 
-Pneumonia classification using ResNet models.
+Performs intensity normalization and resizing
 
-Bounding box localization of affected lung regions.
+Saves processed data for efficient training
 
-Grad-CAM heatmaps providing model interpretability.
+2️⃣ Pneumonia Classification
 
-Clean visualization workflow adapted for radiology projects.
+Model: ResNet18 (PyTorch Lightning)
 
-Author
+Metric: AUROC, Accuracy
 
-Miloš Stanisljevic
-🎓 Radiologic Technologist (MTRA) | AI & Digital Healthcare Enthusiast
-💡 Focus: Medical Imaging, Machine Learning, and Computer Vision,Medical Image Annotation
+Training logs and checkpoints saved automatically in logs/lightning_logs/
 
-📫 Connect on Linkedin:linkedin.com/in/miloš-stanišljević-b1431b24a
+3️⃣ Bounding Box Visualization
+
+Displays radiologist-annotated regions of pneumonia (ground truth)
+
+Uses bounding boxes from stage_2_train_labels.csv
+
+Example:(docs/BBOX_Pneumonia.png)
+
+
+4️⃣ Grad-CAM (Model Interpretability)
+
+Visualizes AI model attention over the same chest X-ray
+
+Compares human (radiologist) vs AI focus
+
+Example:(docs/Heatmap_Pneumonia.png)
+
+
+🧩 Requirements
+
+All dependencies are listed in requirements.txt.
+Key packages:
+
+torch, torchvision, pytorch-lightning
+
+pydicom, opencv-python, matplotlib, pandas, numpy
+
+🩻 Dataset Info
+
+Dataset: RSNA Pneumonia Detection Challenge (Kaggle)
+
+Each image is a chest X-ray in DICOM format.
+
+Each pneumonia region is labeled with bounding box coordinates.
+
+Labels CSV columns:
+patientId, x, y, width, height, Target
 
 
 
-🧭 Notes
+🧩 Author
 
-This repository is part of my ongoing learning journey in AI for Medical Imaging.
-Some notebooks are in the process of optimization and documentation (v1.0 – October 2025).
-
-⭐ If you found this project interesting, give it a star on GitHub!
+Miloš Stanisljavić
+Radiology Technologist (MTRA) | AI & Medical Imaging Enthusiast
+LinkedIn Profile:
+ 
