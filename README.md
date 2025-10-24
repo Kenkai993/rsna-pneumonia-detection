@@ -62,7 +62,8 @@ Compares human (radiologist) vs AI focus
 
 Example:
 
-![Grad-CAM Example](docs/Heatmap_Pneumonia.png)
+![Grad-CAM Example](Pneumonia%20detection%20project/docs/Heatmap_Pneumonia.png)
+
 
 
 
