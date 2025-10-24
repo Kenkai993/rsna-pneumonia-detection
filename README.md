@@ -58,7 +58,8 @@ Visualizes AI model attention over the same chest X-ray
 
 Compares human (radiologist) vs AI focus
 
-Example:(docs/Heatmap_Pneumonia.png)
+Example:![Grad-CAM Example](docs/Heatmap_Pneumonia.png)
+
 
 
 🧩 Requirements
