@@ -15,6 +15,11 @@ It combines medical imaging preprocessing, model training, bounding box visualiz
 > • Dataset: RSNA Pneumonia Detection Challenge (Kaggle, public DICOM).  
 > • Paths are local and checkpoints are not included due to dataset licensing.
 
+> **Reproducibility note:**  
+> All file paths are kept local by design to maintain transparency of the experimental workflow.  
+> The notebooks demonstrate the logic and results, but require adjusting paths to match  
+> the user’s environment for full reproducibility.
+
 ---
 
 ## 📁 Project Structure
